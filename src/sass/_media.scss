@@ -1,0 +1,485 @@
+@media (max-width: 1200px) {
+	.menu {
+		&_item {
+			padding-right: 20px !important;
+		}
+		&_link {
+			font-size: 13px !important;
+		}
+	}
+	.promo .promo_header {
+		font-size: 46px;
+	}
+	.promo .promo_subheader {
+		font-size: 32px;
+	}
+	.reasons .block_reasons {
+		width: 310px;
+	}
+	.reasons .text_reasons {
+		line-height: 18px;
+	}
+	.mobile_item {
+		width: 300px;
+	}
+	.footer {
+		&_wrapper-inform {
+			width: 237px;
+		}
+		&_wrapper-right {
+			width: 237px;
+		}
+		&_wrapper-store {
+			width: 74px;
+			font-size: 1px;
+		}
+		&_wrapper-install {
+			height: 25px;
+			width: 74px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.menu {
+		.menu_item {
+			padding-right: 10px !important;
+		}
+		.menu_link {
+			font-size: 10px !important;
+		}
+	}
+	.logo_uber {
+		width: 100%;
+	}
+	.subheader .subheader_official {
+		font-size: 11px;
+	}
+	.subheader .subheader_phone {
+		font-size: 19px;
+	}
+	.subheader .subheader_btn {
+		margin-top: 29px;
+		width: 142px;
+		height: 38px;
+	}
+	.promo {
+		.promo_header {
+			font-size: 34px;
+		}
+		.promo_subheader {
+			font-size: 23px;
+		}
+	}
+	.reasons .block_reasons {
+		height: 100px;
+	}
+	.reasons .text_reasons {
+		line-height: 18px;
+	}
+	.mobile_item {
+		width: 300px;
+	}
+	div .flex {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.reasons .flex {
+		height: 420px;
+		margin-top: 25px;
+	}
+
+	.reasons .subheder_reasons {
+		margin-top: 18px;
+	}
+
+	.subtitle_reasons {
+		font-size: 35px;
+	}
+	.mobile_item {
+		width: 235px;
+		height: 235px;
+	}
+	.mobile .mobile_item_subtitle {
+		font-size: 17px;
+	}
+	.capabilities {
+		.capabilities_img {
+			width: 453px;
+		}
+	}
+	.footer {
+		&_wrapper {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&-inform:nth-child(1) {
+				order: 2;
+				justify-content: center;
+			}
+			&-massig:nth-child(2) {
+				order: 1;
+				margin-top: 22px;
+				
+			}
+			&-inform:nth-child(3) {
+				order: 3;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.menu {
+		position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: -100%;
+		width: 50%;
+		height: 100vh; /* Занимает все простртанство по высоте */
+		padding: 20px 15px;
+		background-color: rgb(0, 0, 0, 0.8);
+		transition: 0.6s all; /* плавность за 0.6 сек. выезжает меню */
+		&_active {
+			left: 0; /* меню сворачивaет влево за сайт */
+		}
+		&_item {
+			padding-right: 0;
+			border: none;
+			margin: 10px 0;
+		}
+		.menu_link {
+			font-size: 20px !important;
+		}
+	}
+	.hamburger {
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 26px;
+		height: 12px;
+		span {
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #fff;
+			margin-bottom: 2px;
+			transition: 0.5s all; /* плавная анимация */
+		}
+		&_active {
+			span {
+				margin-bottom: -2px;
+				&:nth-child(1) {
+					transform: translateY(3px) rotate(-45deg);
+				}
+				&:nth-child(2) {
+					display: none;
+				}
+				&:nth-child(3) {
+					transform: translateY(3px) rotate(45deg);
+				}
+			}
+		}
+	}
+	.xs-hidden {
+		display: none;
+	} /* исчезает при определенном разрешении */
+	.xs-visible {
+		display: block;
+	} /* появляется при определенном разрешении */
+	/* создание гамбургера */
+	.subheader {
+		.subheader {
+			&_phone {
+				display: block;
+
+				font-size: 16px;
+				font-weight: 400;
+				text-transform: uppercase;
+				color: #ffffff;
+				text-align: center;
+			}
+			&_btn {
+				display: block;
+				width: 200px;
+				height: 40px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.promo {
+		.promo {
+			&_header {
+				line-height: 45px;
+			}
+			&_subheader {
+				line-height: 45px;
+			}
+		}
+	}
+	
+}
+
+@media (max-width: 575px) {
+	nav {
+		height: 30px;
+	}
+	header {
+		height: 30px;
+	}
+	.subheader {
+		top: 30px;
+		height: 60px;
+		.subheader {
+			&_official {
+				display: none;
+			}
+			&_phone {
+				font-size: 12px;
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+			&_btn {
+				width: 116px;
+				height: 28px;
+				font-size: 10px;
+				margin-top: -4px;
+			}
+			&_logo {
+				margin-top: 15px;
+			}
+		}
+	}
+	.promo {
+		min-height: 400px;
+		padding: 113px 0 40px 0;
+		.promo {
+			&_descr {
+				display: none;
+			}
+			&_header {
+				font-size: 28px;
+				padding: 0;
+				line-height: 40px;
+			}
+			&_subheader {
+				margin-top: 33px;
+				font-size: 19px;
+				line-height: 30px;
+				padding: 0;
+			}
+			&_btn {
+				margin-top: 72px;
+				width: 216px;
+				height: 56px;
+			}
+		}
+	}
+	.menu {
+		width: 85%;
+		&_item {
+			width: 100%;
+			text-align: center;
+			padding: 5px 0;
+		}
+		&_link {
+			display: block;
+		}
+		/* растягиваем ссылки в ширину блока и ставим padding для уменьшения ошибочных нажатий пользователями на мобильных устройствах */
+	}
+	.reasons {
+		padding: 22px 0 36px 0;
+		.flex {
+			height: 328px;
+			padding-top: 0px;
+			margin-top: 25px;
+			justify-content: inherit;
+		}
+		.subtitle_reasons {
+			font-size: 14px;
+			margin-top: 15px;
+			line-height: 38px;
+		}
+		.circle {
+			margin: 0 auto;
+			height: 100px;
+			width: 100px;
+		}
+		.block_reasons {
+			height: 220px;
+			width: 100%;
+		}
+		.subheder_reasons {
+			font-size: 16px;
+			margin-top: 32px;
+		}
+		.text_reasons {
+			line-height: 21px;
+		}
+	}
+
+	.mobile {
+		padding: 22px 0 43px 0;
+		.reasons_btn {
+			width: 112px;
+			height: 24px;
+		}
+		.subtitle_reasons {
+			font-size: 16px;
+			margin-top: 14px;
+			line-height: 14px;
+		}
+		.subtitle {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		&_item {
+			width: 277px;
+			height: 254px;
+		}
+		.mobile_item_subtitle {
+			font-size: 18px;
+			line-height: 31px;
+			padding: 0 35px;
+		}
+	}
+
+	.capabilities {
+		min-height: 390px;
+		padding: 25px 0 33px 0;
+		.capabilities {
+			&_btn {
+				width: 112px;
+				height: 24px;
+			}
+			&_item {
+				display: none;
+			}
+			&_sub_item {
+				display: none;
+			}
+			&_img {
+				width: 264px;
+				height: 190px;
+				margin-top: 35px;
+				margin-bottom: 0;
+			}
+		}
+		.subsection_text_x {
+			display: block;
+		}
+	}
+	.subsection_capabilities {
+		display: none;
+	}
+
+	.require {
+		min-height: 1050px;
+		padding: 24px 0 25px 0;
+		.reasons_btn {
+			width: 112px;
+			height: 24px;
+		}
+		.subtitle_reasons {
+			font-size: 16px;
+			margin-top: 15px;
+		}
+		&_block {
+			margin-top: 30px;
+			width: 290px;
+		}
+		&_title {
+			font-size: 16px;
+			line-height: 1px;
+			margin-top: 32px;
+		}
+	}
+	.require {
+		&_list li {
+			font-size: 14px;
+			margin-left: -16px;
+			line-height: 24px;
+		}
+		&_descr {
+			font-size: 14px;
+			margin-top: -18px;
+			margin-bottom: 18px;
+		}
+	}
+	.world {
+		min-height: 360px;
+		padding: 25px 0 30px 0;
+		&_btn {
+			width: 76px;
+			height: 24px;
+		}
+		&_item {
+			font-size: 16px;
+		}
+		&_sub-item {
+			font-size: 14px;
+		}
+		&_item-cities {
+			margin-top: 216px;
+		}
+	}
+	.footer {
+		min-height: 245px;
+		padding: 25px 18px 21px 18px;
+		&_line {
+			width: 253px;
+			height: 4px;
+		}
+		&_wrapper {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&-blok {
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			&-list {
+				width: 280px;
+				margin: 0 auto;
+				padding-left: 0;
+			}
+			&-link {
+				margin-top: 0;
+				font-size: 14px;
+				margin-right: 0;
+				line-height: 12px;
+			}
+			&-right {
+				margin-top: 20px;
+			}
+			&-circle {
+				margin-top: 0;
+			}
+			&-store {
+				margin-top: 0;
+			}
+		}
+		&_comunication {
+			margin-top: 13px;
+			width: 243px;
+			&-list {
+				flex-wrap: wrap;
+				margin-right: 0;
+				margin-bottom: 0;
+				margin-top: 0;
+				line-height: 20px;
+			}
+			&-punkt {
+				display: block;
+			}
+		}
+		&_langvige {
+			margin-top: 13px;
+		}
+	}
+}

@@ -1,0 +1,670 @@
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	position: relative; /* первый вариант при котором первый блок наезжает на другой */
+	height: 53px;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	height: 53px;
+	background-color: #212121;
+	z-index: 5;
+}
+
+.hamburger {
+	display: none;
+} /* гамбургер скрыт */
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	padding: 13px 70px;
+	margin: 0;
+	list-style-type: none; /* убираем точки в списке */
+}
+
+.menu .menu_link {
+	font-weight: 300;
+	font-size: 15px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.menu .menu_item {
+	border-right: 2px dotted black; /* точеный разделитель */
+	padding-right: 28px;
+}
+
+.menu .menu_item:last-child {
+	border-right: none; /* убрать точечный разделитель */
+}
+
+.subheader {
+	position: absolute;
+	width: 100%; /* - первый вариант при котором один блок наезжает на другой */
+	/* position: relative; - второй вариант при котором один блок наезжает на другой */
+	top: 50px;
+	height: 83px;
+	background-color: rgba(0, 0, 0, 0.6); /* .6 cоответствует 60% прозрачности в альфа канале */
+	/* opacity: 0.6; прозрачность всего блока, проблема-все элементы блока прозрачные, поэтому в бекграунд-color делаем rgba и альфа-канал */
+	/* z-index: 2; второй вариант при котором один блок наезжает на другой */
+}
+
+/* чтобы правильно распологался код Alt-Shift-F */
+
+.subheader .subheader_logo {
+	display: block;
+	max-width: 100%; /* если логотип изменится с помощью данного свойства он не вылезит за блок */
+	margin-top: 19px; /* если не работает margin-top: значит не выставленно значение display-block; */
+}
+
+.subheader .subheader_official {
+	margin-top: 2px;
+	opacity: 0.5;
+	font-weight: 200;
+	font-size: 13px;
+	color: #ffffff;
+}
+
+.subheader .subheader_call {
+	display: block;
+	margin-top: 24px;
+	font-family: Roboto;
+	font-weight: 300;
+	font-size: 12px;
+	color: #ffffff;
+	text-align: right;
+}
+
+.subheader .subheader_phone {
+	/* display: block; */
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: right;
+	line-height: 30px;
+}
+
+.subheader .subheader_btn {
+	display: block;
+	margin-top: 21px;
+	font-family: Roboto;
+	font-weight: normal;
+	font-size: 14px;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+	width: 172px;
+	height: 46px;
+	background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+	border-radius: 4px;
+	border: 0;
+	padding: 0;
+	@include btn_hover;
+}
+
+.promo {
+	min-height: 799px;
+	background: url("../img/bg/bg_first.jpg") center center/cover no-repeat;
+	padding: 141px 0 185px 0;
+	/* transform: translateY(-83px); второй вариант при котором один блок наезжает на другой */
+	/* z-index: 1; второй вариант при котором один блок наезжает на другой */
+}
+
+.promo .promo_header {
+	font-weight: 900;
+	font-size: 60px;
+	align-items: center;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.promo .promo_subheader {
+	font-weight: 700;
+	font-size: 36px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 0;
+	margin-top: 22px;
+	line-height: 0;
+}
+
+.promo .promo_descr {
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+	color: #ffffff;
+	margin: 0;
+	margin-top: 46px;
+	line-height: 24px;
+}
+
+.promo .promo_btn {
+	display: block;
+	margin: 115px auto 0 auto;
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+	width: 259px;
+	height: 63px;
+	background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+	box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	border: none;
+	@include btn_hover;
+}
+
+.reasons {
+	min-height: 849px;
+	padding: 20px 0 67px 0;
+}
+
+.reasons_btn {
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	width: 115px;
+	height: 27px;
+	background: #000000;
+	font-weight: 400;
+	font-size: 11px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	mix-blend-mode: normal;
+}
+
+.subtitle_reasons {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #222222;
+	margin: 32px 0 -15px 0;
+}
+
+/* .reasons .sub_section {
+	padding: 16px 0 67px 0;
+} */
+
+.reasons .flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	padding-top: 60px;
+	margin-top: 10px;
+}
+
+/* max-height: 150px;
+	padding-top: 60px;
+	margin-top: 60px;	необходимы состовляющие для выравнивания по вертикали */
+
+/* .reasons .flex_6 {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	margin-top: 75px;
+}
+ */
+
+.reasons .circle {
+	width: 116px;
+	height: 116px;
+	border-radius: 100%;
+	background: $color;
+	display: flex;
+	align-items: center;
+	margin-right: 25px;
+}
+
+.reasons .icons_reasons {
+	display: block;
+	margin: 0 auto;
+}
+
+.reasons .block_reasons {
+	width: 372px;
+}
+
+.reasons .block_reasons_two {
+	width: 340px;
+}
+
+.reasons .subheder_reasons {
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 21px;
+	align-items: center;
+	color: $color;
+}
+
+.reasons .text_reasons {
+	display: inline-block;
+	margin-top: -8px;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 21px;
+	align-items: center;
+	color: #202020;
+}
+
+.mobile {
+	min-height: 864px;
+	padding: 48px 0 80px 0;
+	background: url("../img/bg/mobile_bg.png") center center/cover no-repeat;
+
+	.row {
+		margin-top: 30px;
+	}
+	.subtitle {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		align-items: center;
+		text-align: center;
+		color: #222222;
+		margin-top: 16px;
+	}
+
+	&_item {
+		position: relative; /* выравнивание по центру */
+		width: 320px;
+		height: 280px;
+		margin: 0 auto;
+		margin-bottom: 19px;
+		padding-top: 88px;
+
+		&_1 {
+			background: url(../img/Cards/card_1.jpg);
+		}
+		&_2 {
+			background: url(../img/Cards/card_2.png);
+		}
+		&_3 {
+			background: url(../img/Cards/card_3.png);
+		}
+		&_4 {
+			background: url(../img/Cards/card_4.png);
+		}
+		&_5 {
+			background: url(../img/Cards/card_5.png);
+		}
+		&_6 {
+			background: url(../img/Cards/card_6.png);
+		}
+	}
+	.mobile_item_subtitle {
+		font-weight: 400px;
+		font-size: 24px;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	.mobile_item_plus {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex; /* выравнивание по центру */
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center; /* выравнивание по центру */
+		position: absolute; /* выравнивание по центру */
+		bottom: 35px;
+		left: 50%; /* выравнивание по центру */
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%); /* выравнивание по центру */
+		width: 26px;
+		height: 26px;
+		background: #000000;
+		margin: 0 auto; /* выравнивание по центру */
+		border-radius: 100%;
+		cursor: pointer;
+		&::before {
+			content: "";
+			display: block;
+			width: 14px;
+			height: 2px;
+			background-color: $color;
+			transition: 0.3s all;
+		} /* рисуем крестик */
+		&::after {
+			content: "";
+			position: absolute; /* позиционирование по центру */
+			left: 50%; /* позиционирование по центру */
+			transform: translateX(-50%); /* позиционирование по центру */
+			display: block;
+			height: 14px;
+			width: 2px;
+			background-color: $color;
+		} /* рисуем крестик */
+		&:hover {
+			&::before,
+			&::after {
+				background-color: $color_pink;
+			}
+		}
+	}
+}
+
+.capabilities {
+	min-height: 499px;
+	padding-top: 55px;
+	background: #070716;
+	&_btn {
+		display: block;
+		margin: 0 auto;
+		border: 0;
+		width: 115px;
+		height: 27px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 11px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #070716;
+	}
+	&_item {
+		margin-top: 33px;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 38px;
+		align-items: center;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	&_img {
+		display: block;
+		margin: 0 auto;
+		margin-top: 54px;
+		margin-bottom: -214px;
+	}
+	&_sub_item {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 21px;
+		align-items: center;
+		text-align: center;
+		color: #ffffff;
+	}
+	.subsection_text_x {
+			font-size: 17px;
+			line-height: 24px;
+			font-weight: 300;
+			color: #ffffff;
+			text-align: center;
+			display: none;
+		}
+	
+	.subsection_capabilities {
+		min-height: 397px;
+		background: url("../img/bg/podlogka_2.jpg") center center/cover no-repeat;
+		.subsection_text {
+			padding-top: 210.5px;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 17px;
+			line-height: 24px;
+			text-align: center;
+			color: #222222;
+		}
+	}
+}
+
+.require {
+	padding: 68px 0 87px 0;
+	&_block {
+		margin: 33px 0;
+		&_nmb {
+			margin-bottom: 0px;
+		}
+	}
+	&_title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		align-items: center;
+		color: #1ca8c3;
+	}
+	&_list {
+		list-style-type: none;
+		padding-left: 50px;
+		margin-top: 20px;
+		li {
+			position: relative; /* второй способ выравнивания по центру */
+			font-style: normal;
+			font-weight: 300;
+			font-size: 17px;
+			line-height: 24px;
+			margin-bottom: 10px;
+			align-items: center;
+			color: #222222;
+			&::before {
+				content: "";
+				display: block; /* второй способ выравнивания по центру */
+				/* display: inline-block; первый способ выравнивания по центру */
+				position: absolute; /* второй способ выравнивания по центру */
+				/*  vertical-align: middle; первый способ выравнивания поцентру */
+				/* transform: translate(-5px, -2px); первый способ выравнивания по центру */
+				left: -32px; /* второй способ выравнивания по центру */
+				top: 1px; /* второй способ выравнивания по центру */
+				/* transform: translateY(-50%); первый способ выравнивания по центру */
+				width: 21px;
+				height: 20px;
+				background: url(../icons/Conditions_svg/check_blue_1.svg) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+	}
+	&_descr {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 17px;
+		line-height: 24px;
+		align-items: center;
+		color: #1ca8c3;
+	}
+	.warning {
+		.require_title {
+			color: $color_pink;
+		}
+		.require_list {
+			li {
+				&::before {
+					background: url(../icons/Requirements_and_documents_svg/check_red_1.svg) no-repeat;
+					background-size: cover;
+					background-position: center;
+				}
+			}
+		}
+	}
+}
+
+.world {
+	padding: 46px 0 21.5px 0;
+	min-height: 717px;
+	background: url(../img/bg/world_bg.png) center center/cover no-repeat;
+	&_btn {
+		display: block;
+		margin: 0 auto;
+		width: 75px;
+		height: 25px;
+		font-style: 400;
+		font-weight: normal;
+		font-size: 11px;
+		text-align: center;
+		text-transform: uppercase;
+		border: 0;
+		color: #070716;
+	}
+	&_item {
+		display: block;
+		margin: 0 auto;
+		margin-top: 26px;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 38px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	&_sub-item {
+		display: block;
+		margin: 0 auto;
+		margin-top: 5px;
+		font-weight: 400;
+		font-size: 17px;
+		text-align: center;
+		color: #ffffff;
+	}
+	&_item-cities {
+		display: block;
+		margin-top: 456px;
+		font-weight: 400;
+		font-size: 15px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #1fbad6;
+		text-decoration: none;
+		&:hover {
+			color: $color_pink;
+		}
+		&:active {
+			color: orange;
+		}
+		&:visited {
+			color: orange;
+		}
+	}
+}
+
+.footer {
+	min-height: 155px;
+	padding: 15px 21px 40px 25px;
+	&_line {
+		width: 299px;
+		height: 4px;
+		background: #1fbad6;
+		margin: 0 auto;
+	}
+	&_wrapper {
+		display: flex;
+		justify-content: space-between;
+		// align-items: center;
+		&-inform {
+			display: flex;
+			justify-content: space-between;
+			width: 296px;
+		}
+		&-blok {
+			display: flex;
+			justify-content: space-between;
+			width: 152px;
+		}
+		&-circle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 33px;
+			width: 32px;
+			height: 32px;
+			border-radius: 100%;
+			background: #070716;
+			color: #ffffff;
+		}
+		&-list {
+			display: flex;
+			justify-content: space-between;
+			list-style-type: none;
+		}
+		&-link {
+			display: block;
+			text-decoration: none;
+			margin-right: 47px;
+			margin-top: 36px;
+			font-weight: 300;
+			font-size: 15px;
+			align-items: center;
+			text-transform: uppercase;
+			color: #070716;
+		}
+		&-right {
+			width: 296px;
+			display: flex;
+			justify-content: space-between;
+		}
+		&-store {
+			margin-top: 33px;
+			height: 26px;
+			width: 94px;
+			border-radius: 6px;
+			border: 0;
+			padding: 0;
+		}
+		&-install {
+			height: 32px;
+			width: 94px;
+		}
+	}
+	&_comunication {
+		width: 420px;
+		margin: 0 auto;
+		&-list {
+			display: flex;
+			margin-top: -20px;
+			margin-right: 10px;
+			justify-content: space-between;
+			list-style-type: none;
+			padding: 0;
+		}
+		&-link {
+			text-decoration: none;
+			font-weight: 300;
+			font-size: 11px;
+			align-items: center;
+			text-transform: uppercase;
+			color: #999999;
+		}
+	}
+	&_langvige {
+		display: block;
+		margin: 0 auto;
+		margin-top: 15px;
+		font-weight: normal;
+		font-size: 11px;
+		align-items: center;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #1fbad6;
+	}
+}
+.xs-visible {
+	display: none;
+} /* исчезает при опеределнном разешерии относится ко второму элементу */

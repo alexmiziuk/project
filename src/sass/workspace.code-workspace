@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\..\\Documents\\Visual Studio 2019\\Templates\\ProjectTemplates\\css\\PROJECT_5\\src"
+	},
+	{
+		"path": "..\\..\\..\\..\\Documents\\Visual Studio 2019\\Templates\\ProjectTemplates\\css\\PROJECT_7"
+	},
+	{
+		"path": "..\\.."
+	},
+	{
+		"path": "..\\..\\..\\..\\Documents\\Visual Studio 2019\\Templates\\ProjectTemplates\\css\\PROJECT_8"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "src"
+  }
+}
